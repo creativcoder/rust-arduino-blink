@@ -9,7 +9,7 @@ use arduino_uno::hal::port::portb::PB5;
 use arduino_uno::hal::port::mode::Output;
 
 fn stutter_blink(led: &mut PB5<Output>, times: usize) {
-    (0..times).take(times).map(|i| i * 10).for_each(|i| {
+    (0..times).map(|i| i * 10).for_each(|i| {
         led.toggle().void_unwrap();
         arduino_uno::delay_ms(i as u16);
     });
