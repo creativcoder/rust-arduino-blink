@@ -6,7 +6,7 @@
 
 on: [push, pull_request]
 
-name: Quickstart
+name: Cargo check
 
 jobs:
   check:
